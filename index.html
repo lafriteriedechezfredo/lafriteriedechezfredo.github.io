@@ -10,9 +10,11 @@
         h1 { text-align: center; color: #FFD700; }
         .category { background: #800020; padding: 15px; border-radius: 10px; margin-bottom: 20px; box-shadow: 0 2px 5px rgba(0,0,0,0.1); }
         h2 { border-bottom: 2px solid #FFD700; padding-bottom: 5px; color: #FFD700; margin-top: 0; }
+        .weight-header { font-size: 0.6em; color: #FFD700; text-align: center; width: 45px; display: inline-block; font-weight: normal; }
         .item { display: flex; justify-content: space-between; margin: 10px 0; font-size: 1.1em;color: #ffffff }
-        .price { font-weight: bold; color: #ffffff; }
-        .description { font-size: 0.9em;color:#ffffff; margin: 2px 0 15px 0; font-style:italic;}
+        .prices { display: flex; gap: 10px; min-width: 100px; justify-content: flex-end; }
+        .price { font-weight: bold; width: 45px; text-align: right; }
+        .description { font-size: 0.9em;color:#ffffff; margin: 0 0 15px 0; font-style:italic;}
     </style>
 </head>
 <body>
@@ -25,8 +27,16 @@
     </section>
 
     <section class="category">
-        <h2>Burgers</h2>
-        <div class="item"><span>Burger "Simple"</span><span class="price">7.50€</span></div>
+        <h2>Burgers
+        <div>
+            <span class="weight-header">100g</span>
+            <span class="weight-header">150g</span>
+        </div>
+        </h2>
+        <div class="item"><span>Burger "Simple"</span><span class="prices">
+            <span class="price">7.50€</span>
+            <span class="price">9.50€</span>
+        </span></div>
         <div class="description"><span>Steak, salade, cheddar, tomate, oignon rouge, cornichon</span></div>
         <div class="item"><span>Burger "Chorizo" ou "Bacon"</span><span class="price">8.00€</span></div>
         <div class="item"><span>Burger "Kansas"</span><span class="price">8.00€</span></div>
