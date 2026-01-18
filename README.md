@@ -1,1 +1,1 @@
-# lafriteriedechezfredo.github.io
+# La Friterie de Chez Fredo
