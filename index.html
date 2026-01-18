@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style>
+        :root {
+            --fond: #FFF8E1; /* Couleur de fond (Jaune clair) */
+            --accent: #E65100; /* Couleur titre (Orange friterie) */
+            --texte: #333;
+        }
+        body { font-family: sans-serif; background: var(--fond); color: var(--texte); text-align: center; padding: 20px; }
+        .logo { max-width: 150px; border-radius: 50%; }
+        .menu-item { background: white; margin: 10px auto; padding: 15px; max-width: 400px; border-radius: 8px; box-shadow: 0 2px 5px rgba(0,0,0,0.1); display: flex; justify-content: space-between; }
+        h1 { color: var(--accent); }
+        .prix { font-weight: bold; color: var(--accent); }
+    </style>
+</head>
+<body>
+
+    <img src="https://votre-depot.github.io/logo.png" alt="Logo Friterie" class="logo">
+
+    <h1>La Friterie de Chez Fredo</h1>
+    <p>Ouvert Mardi et Vendredi</p>
+
+    <div id="menu">
+        <div class="menu-item">
+            <span>Frites Maison (Grande)</span>
+            <span class="prix">4.50€</span>
+        </div>
+        <div class="menu-item">
+            <span>Fricadelle</span>
+            <span class="prix">3.00€</span>
+        </div>
+        <div class="menu-item">
+            <span>Menu Burger + Boisson</span>
+            <span class="prix">10.50€</span>
+        </div>
+    </div>
+
+</body>
+</html>
