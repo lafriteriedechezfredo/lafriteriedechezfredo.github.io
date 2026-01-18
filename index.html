@@ -9,23 +9,10 @@ body { font-family: sans-serif; max-width: 600px; margin: auto; padding: 20px; b
 h1 { text-align: center; color: #FFD700; }
 .category { background: #800020; padding: 15px; border-radius: 10px; margin-bottom: 20px; box-shadow: 0 2px 5px rgba(0,0,0,0.1); }
 h2 { border-bottom: 2px solid #FFD700; padding-bottom: 5px; color: #FFD700; margin-top: 0; }
-
-/* Structure en grille pour aligner parfaitement les colonnes */
-.grid-row {
-    display: grid;
-    grid-template-columns: 1fr 60px 60px;
-    gap: 0; /* On gère l'espace avec du padding pour que la ligne soit continue */
-    align-items: center;
-}
-
+.grid-row {display: grid;grid-template-columns: 1fr 60px 60px;gap: 0;align-items: center;}
 .item-name { color: #ffffff; font-size: 1.1em; padding-right: 10px; }
 .price { color: #ffffff; font-weight: bold; text-align: center; padding: 5px 0; }
-
-/* La ligne verticale */
-.border-left {
-    border-left: 2px solid #ffffff;
-}
-
+.border-left {border-left: 2px solid #ffffff;}
 .header-text { color: #FFD700; font-size: 0.6em; text-align: center; font-weight: normal; margin-bottom: 5px; }
 .description { font-size: 0.8em; color:#ffffff; margin: 2px 0 15px 0; font-style:italic; padding-right: 120px; }
 </style>
@@ -44,13 +31,12 @@ h2 { border-bottom: 2px solid #FFD700; padding-bottom: 5px; color: #FFD700; marg
 </section>
 
 <section class="category">
-    <h2>Burgers</h2>
-    
+    <h2>Burgers
     <div class="grid-row">
         <span></span>
         <div class="header-text">Steak 100g</div>
         <div class="header-text border-left">Steak 150g</div>
-    </div>
+    </div></h2>
 
     <div class="grid-row">
         <span class="item-name">Burger “Simple”</span>
