@@ -1,73 +1,121 @@
-
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>La Friterie de Chez Fredo</title>
-    <style>
-        body { font-family: sans-serif; max-width: 600px; margin: auto; padding: 20px; background: #000000; }
-        h1 { text-align: center; color: #FFD700; }
-        .category { background: #800020; padding: 15px; border-radius: 10px; margin-bottom: 20px; box-shadow: 0 2px 5px rgba(0,0,0,0.1); }
-        h2 { border-bottom: 2px solid #FFD700; padding-bottom: 5px; color: #FFD700; margin-top: 0; }
-        .grid-row {display: grid; grid-template-columns: 1fr 50px 50px; /* Nom / Col 1 / Col 2 */;gap: 10px;align-items: center;margin-bottom: 8px;}
-        .yellow-text { color: #FFD700; font-weight: normal; font-size: 0.5em; text-align: right; }
-        .weight-header { font-size: 0.6em; color: #FFD700; text-align: right; width: 5px; display: inline-block; font-weight: normal; }
-        .item { display: flex; justify-content: space-between; margin: 10px 0; font-size: 1.1em;color: #ffffff }
-        .prices { display: flex; gap: 10px; min-width: 100px; justify-content: flex-end; }
-        .price { font-weight: bold; width: 45px; text-align: right; }
-        .pricer { font-weight: bold; width: 45px; text-align: right; border-left: 2px solid #ffffff;}
-        .description { font-size: 0.8em;color:#ffffff; margin: 0 0 15px 0; font-style:italic;}
-    </style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>La Friterie de Chez Fredo</title>
+<style>
+body { font-family: sans-serif; max-width: 600px; margin: auto; padding: 20px; background: #000000; }
+h1 { text-align: center; color: #FFD700; }
+.category { background: #800020; padding: 15px; border-radius: 10px; margin-bottom: 20px; box-shadow: 0 2px 5px rgba(0,0,0,0.1); }
+h2 { border-bottom: 2px solid #FFD700; padding-bottom: 5px; color: #FFD700; margin-top: 0; }
+
+/* Structure en grille pour aligner parfaitement les colonnes */
+.grid-row {
+    display: grid;
+    grid-template-columns: 1fr 60px 60px;
+    gap: 0; /* On gère l'espace avec du padding pour que la ligne soit continue */
+    align-items: center;
+}
+
+.item-name { color: #ffffff; font-size: 1.1em; padding-right: 10px; }
+.price { color: #ffffff; font-weight: bold; text-align: center; padding: 5px 0; }
+
+/* La ligne verticale */
+.border-left {
+    border-left: 2px solid #ffffff;
+}
+
+.header-text { color: #FFD700; font-size: 0.6em; text-align: center; font-weight: normal; margin-bottom: 5px; }
+.description { font-size: 0.8em; color:#ffffff; margin: 2px 0 15px 0; font-style:italic; padding-right: 120px; }
+</style>
 </head>
 <body>
 
-    <h1>La Friterie de Chez Fredo</h1>
+<h1>La Friterie de Chez Fredo</h1>
 
-    <section class="category">
-        <h2>Frites Ch'tis</h2>
-        <div class="item"><span>Barquette de Frites</span><span class="price">2.60€</span></div>
-    </section>
+<section class="category">
+    <h2>Frites Ch'tis</h2>
+    <div class="grid-row">
+        <span class="item-name">Barquette de Frites</span>
+        <span></span>
+        <span class="price">2.60€</span>
+    </div>
+</section>
 
-    <section class="category">
-        <h2>Burgers
-        <div class="grid-row">
-            <span></span> <div class="yellow-text">Steak 100g</div>
-            <div class="yellow-text">Steak 150g</div>
-        </div>
-        </h2>
-        
-        <div class="item"><span>Burger "Simple"</span><span class="prices"><span class="price">7.50€</span><span class="pricer">12.50€</span></span></div>
-        <div class="description"><span>Steak, salade, cheddar, tomate, oignon rouge, cornichon</span></div>
-        
-        <div class="item"><span>Burger "Chorizo"</span><span class="prices"><span class="price">8.00€</span><span class="pricer">13.00€</span></span></div>
-        <div class="description"><span>Steak, salade, chorizo, cheddar, tomate, oignon rouge, cornichon</span></div>
+<section class="category">
+    <h2>Burgers</h2>
+    
+    <div class="grid-row">
+        <span></span>
+        <div class="header-text">Steak 100g</div>
+        <div class="header-text border-left">Steak 150g</div>
+    </div>
 
-        <div class="item"><span>Burger "Bacon"</span><span class="prices"><span class="price">8.00€</span><span class="pricer">13.00€</span></span></div>
-        <div class="description"><span>Steak, salade, bacon, cheddar, tomate, oignon rouge, cornichon</span></div>
-        
-        <div class="item"><span>Burger "Kansas"</span><span class="prices"><span class="price">8.00€</span><span class="pricer">13.00€</span></span></div>
-        <div class="description"><span>Steak, salade, lard, cheddar, tomate, oignon rouge, cornichon</span></div>
+    <div class="grid-row">
+        <span class="item-name">Burger “Simple”</span>
+        <span class="price">7.50€</span>
+        <span class="price border-left">12.50€</span>
+    </div>
+    <div class="description">Steak, salade, cheddar, tomate, oignon rouge, cornichon</div>
 
-        <div class="item"><span>Burger "Chèvre-Miel"</span><span class="prices"><span class="price">9.00€</span><span class="pricer">14.50€</span></span></div>
-        <div class="description"><span>Steak, salade,chèvre, miel, cornichon</span></div>
+    <div class="grid-row">
+        <span class="item-name">Burger “Chorizo”</span>
+        <span class="price">8.00€</span>
+        <span class="price border-left">13.00€</span>
+    </div>
+    <div class="description">Steak, salade, chorizo, cheddar, tomate, oignon rouge, cornichon</div>
 
-        <div class="item"><span>Burger "Poulet pané"</span><span class="prices"><span class="price">7.50€</span><span class="price"></span></span></div>
-        <div class="description"><span>Filet de poulet pané, salade, cheddar, tomate, oignon rouge, cornichon</span></div>
+    <div class="grid-row">
+        <span class="item-name">Burger “Bacon”</span>
+        <span class="price">8.00€</span>
+        <span class="price border-left">13.00€</span>
+    </div>
+    <div class="description">Steak, salade, bacon, cheddar, tomate, oignon rouge, cornichon</div>
 
-        <div class="item"><span>Burger "Veggie"</span><span class="prices"><span class="price">8.00€</span><span class="price"></span></span></div>
-        <div class="description"><span>Steak végétal, salade, lard, cheddar, tomate, oignon rouge, cornichon</span></div>
-        
-        <div class="item"><span>Burger "Le 80"</span><span class="prices"><span class="price">8.00€</span><span class="price"></span></span></div>
-        <div class="description"><span>Steak 80g, cheddar, ketchup</span></div>
-    </section>
+    <div class="grid-row">
+        <span class="item-name">Burger “Kansas”</span>
+        <span class="price">8.00€</span>
+        <span class="price border-left">13.00€</span>
+    </div>
+    <div class="description">Steak, salade, lard, cheddar, tomate, oignon rouge, cornichon</div>
 
-    <section class="category">
-        <h2>Hot Dogs</h2>
-        <div class="item"><span>Hot Dog</span><span class="price">5.4€</span></div>
-        <div class="item"><span>Hot Dog "oignon frits"</span><span class="price">6.3€</span></div>
-        <div class="item"><span>Hot Dog "Tucson"</span><span class="price">9.30€</span></div>
-    </section>
+    <div class="grid-row">
+        <span class="item-name">Burger "Chèvre-Miel"</span>
+        <span class="price">9.00€</span>
+        <span class="price border-left">14.50€</span>
+    </div>
+    <div class="description">Steak, salade, chèvre, miel, cornichon</div>
+
+    <div class="grid-row">
+        <span class="item-name">Burger "Poulet pané"</span>
+        <span class="price">7.50€</span>
+        <span class="price border-left"></span>
+    </div>
+    <div class="description">Filet de poulet pané, salade, cheddar, tomate, oignon rouge, cornichon</div>
+
+    <div class="grid-row">
+        <span class="item-name">Burger “Veggie”</span>
+        <span class="price">8.00€</span>
+        <span class="price border-left"></span>
+    </div>
+    <div class="description">Steak végétal, salade, lard, cheddar, tomate, oignon rouge, cornichon</div>
+</section>
+
+<section class="category">
+    <h2>Hot Dogs</h2>
+    <div class="grid-row">
+        <span class="item-name">Hot Dog</span>
+        <span></span>
+        <span class="price">5.40€</span>
+    </div>
+    <div class="grid-row">
+        <span class="item-name">Hot Dog “oignons frits”</span>
+        <span></span>
+        <span class="price">6.30€</span>
+    </div>
+</section>
 
 </body>
 </html>
+
